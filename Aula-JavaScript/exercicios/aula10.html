@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+    <style>
+        div#area{
+            background-color: rgb(5, 78, 8);
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Eventos DOM</h1></header>
+    <p>Evento é tudo que pode acontece com a DIV ex: evento de mouse</p>
+    <ul>
+        <li>mouseenter</li>
+        <li>mousedown</li>
+        <li>mouseout</li>
+    </ul>
+    <h2>Funções</h2>
+    <p>para que um evento seja executado em JS eu preciso coloca-lo em uma função = function</p>
+    <p>Para que o HTML não fique poluido eu posso usar o ouvidor addEventListener </p>
+    <p>Se eu colocar o addEventListener dentro da função não funciona (não estava usando vAR fora da função, mas o LET em cada função). <br/> No caso desse exercício que eu estou treinando o ouvidor addEventListener só funciona quando está de forma global tanto como LET ou VAR <br/>Interessante: Eu esqueci de tirar a palavra cliclar do evento mouseout quando eu saia o evento clique era acionado</p>
+    <div id="area">
+
+        interaja...
+    </div>
+
+    <script>
+
+        let a = document.getElementById('area');
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+
+        function clicar(){
+
+                       
+            a.innerText = 'Clicou!';
+            a.style.background= 'red';
+
+        };
+        function entrar(){
+
+            
+            
+            a.innerText = 'Entrou';
+            a.style.background= 'green';
+
+
+        };
+        function sair(){
+
+           
+            
+            a.innerText = 'Saiu!';
+            a.style.background= 'green';
+
+        };
+
+    </script>
+</body>
+</html>

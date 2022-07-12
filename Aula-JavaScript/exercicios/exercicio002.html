@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercocio 002</title>
+    <title>tratatmento de dados</title>
     <style>
 
         body{
@@ -32,12 +32,13 @@
         // var nome = window.prompt(`Qual é o seu nome?`)
         // document.write(`Seu nome é ` + nome ) 
         
-        var n1 = Number(window.prompt(`Escolha um número`))
-        var n2 = Number(window.prompt(`Escolha outro número`))
+        var n1 = Number(window.prompt(`Escolha um número`).replace(',', '.'))
+        var n2 = Number(window.prompt(`Escolha outro número`).replace(',', '.'))
         var s = n1 + n2
 
-        document.write(`seu primeiro número é: ${n1} </br> seu segundo número é: ${n2} </br> `)
-        document.write(`A soma dos números é ${s}`)
+        document.write(`seu primeiro número é: ${n1} </br>` .replace('.', ','))
+        document.write(`seu segundo número é: ${n2} </br> ` .replace('.', ','))
+        document.write(`A soma dos números é: ${s}`.replace('.', ','))
 
         
 
